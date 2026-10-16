@@ -325,7 +325,7 @@ if __name__ == "__main__":
     env_file = Path(__file__).parent / ".env"
     if env_file.exists():
         for line in env_file.read_text().splitlines():
-            if "=" in line and not line.startswith("#"):
+            if "=" in line and not line.startswith(":
                 k, _, v = line.partition("=")
                 os.environ.setdefault(k.strip(), v.strip())
 
